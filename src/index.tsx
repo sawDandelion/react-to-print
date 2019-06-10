@@ -36,7 +36,11 @@ export default class ReactToPrint extends React.Component<IReactToPrintProps> {
     };
 
     triggerPrint = (target) => {
-        const { onBeforePrint, onAfterPrint } = this.props;
+        const { onBeforePrint, onAfterPrint, isNeedPrint = true } = this.props;
+
+        if (!isNeedPrint) {
+            return;
+        }
 
         if (onBeforePrint) {
             onBeforePrint();
