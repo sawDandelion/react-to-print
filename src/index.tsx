@@ -21,6 +21,7 @@ export interface IReactToPrintProps {
     pageStyle?: string;
     /** Optional class to pass to the print window body */
     bodyClass?: string;
+    isNeedPrint?: boolean;
 }
 
 export default class ReactToPrint extends React.Component<IReactToPrintProps> {
